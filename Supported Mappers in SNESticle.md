@@ -147,6 +147,8 @@ By disassembling other parts of the code using IDA Pro, it was also discovered t
 SNESticle支持的NES的Mapper
 
 通过用IDA Pro反编译SNESticle的PS2版二进制文件，得到以下函数：
+
+```c
 const char *__fastcall sub_140AD8(int a1)
 {
   const char *v1; // $v1
@@ -212,6 +214,8 @@ const char *__fastcall sub_140AD8(int a1)
   }
   return v1;
 }
+```
+
 
 通过扔给chatGPT分析，得到以下回答：
 
@@ -244,6 +248,7 @@ const char *__fastcall sub_140AD8(int a1)
 
 ### 🛠️ 示例改写为查找表（适合未来你要 patch）：
 
+```c
 typedef struct {
     int mapper;
     const char* name;
@@ -272,7 +277,7 @@ const char* get_mapper_name(int mapper)
     }
     return "<unknown>";
 }
-
+```
 这样更易读、易维护。
 
 经过测试，发现SNESticle虽然支持上述Mapper，但是兼容性一般，除了0、1、2、3、4、5、15以外，其他虽然属于支持的Mapper，但其实兼容性比较差。就算兼容比较好的Mapper如Mapper 4，居然连忍者神龟3都无法运行。
