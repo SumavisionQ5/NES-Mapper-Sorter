@@ -34,7 +34,7 @@ D:\nes
 char searchPath[MAX_PATH] = "D:\\nes\\*.nes";
 ````
 
-或后续改为命令行参数方式。
+
 
 4. 运行程序，它会自动：
 
@@ -64,31 +64,6 @@ char searchPath[MAX_PATH] = "D:\\nes\\*.nes";
 10-Yard Fight (USA, Europe).nes    Mapper: 0
 The Legend of Zelda (USA).nes      Mapper: 1
 ...
-```
 
----
-
-## 编译方法
-
-### Windows (MinGW)
-
-```bash
-g++ -o NES-Mapper-Sorter.exe main.cpp
-```
-
-### Windows (MSVC)
-
-在 Visual Studio 打开项目，直接编译即可。
-
----
-
-
-## 许可证
-
-MIT License
-
-```
-
----
 
 
