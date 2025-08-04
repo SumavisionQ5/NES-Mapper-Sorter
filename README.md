@@ -1,21 +1,3 @@
-
-**`NES-Mapper-Sorter`**
-
-* 简洁明了：说明这是一个 NES 文件整理工具（基于 Mapper）。
-* GitHub 项目名好记、好搜索，未来扩展功能（比如支持统计、导出 JSON）也能兼容。
-* 如果想更活泼一点：
-
-  * `MapperMover` （Mapper 移动器）
-  * `NES-Mapper-Organizer`
-  * `NMapper`（简短）
-
-推荐用 **`NES-Mapper-Sorter`**。
-
----
-
-## **README.md 初稿**
-
-```markdown
 # NES-Mapper-Sorter
 
 一个小工具，用于**扫描并按 Mapper 值整理 NES (iNES) ROM 文件**。  
