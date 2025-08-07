@@ -138,7 +138,8 @@ This version is more readable and easier to maintain.
 
 ---
 
-After testing, it was found that although SNESticle supports the above mappers, its compatibility is mediocre. Aside from mappers 0, 1, 2, 3, 4, 5, and 15, others are technically supported but in practice are poorly compatible. Even for the relatively compatible mapper 4, it fails to run games like *Teenage Mutant Ninja Turtles III*.
+After testing, it was found that although SNESticle supports the above mappers, its compatibility is mediocre. Aside from mappers 0, 1, 2, 3, 4, 5, and 15, others are technically supported but in practice are poorly compatible. 
+Attention: Length of ROM's filename could not be too long, or ROM will not be loaded by SNEStilce.
 
 By disassembling other parts of the code using IDA Pro, it was also discovered that although SNESticle supports FDS (requires placing `disksys.rom` in the same folder as the FDS files), its support is very poor—most FDS games fail to run, with only a handful actually working.
 
@@ -280,5 +281,6 @@ const char* get_mapper_name(int mapper)
 ```
 这样更易读、易维护。
 
-经过测试，发现SNESticle虽然支持上述Mapper，但是兼容性一般，除了0、1、2、3、4、5、15以外，其他虽然属于支持的Mapper，但其实兼容性比较差。就算兼容比较好的Mapper如Mapper 4，居然连忍者神龟3都无法运行。
+经过测试，发现SNESticle虽然支持上述Mapper，但是兼容性一般，除了0、1、2、3、4、5、15以外，其他虽然属于支持的Mapper，但其实兼容性比较差。
+注意：ROM的文件名不能太长，否则模拟器读取时会出错。如：No-intro的忍者神龟3的文件名太长模拟器读取出错，改短就能正常运行了。
 通过IDA Pro反编译其他部分的代码，发现虽然SNESticle支持FDS（需要将disksys.rom与fds放同一文件夹下），但对FDS的支持度非常差，绝大部分FDS无法运行，只有少量FDS可以运行。
