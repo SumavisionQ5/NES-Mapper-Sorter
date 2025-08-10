@@ -17,8 +17,8 @@
 
 ## 用法
 
-1. 下载并编译本项目源码（支持 MinGW / MSVC）。
-2. 确保待整理的 ROM 文件放在某个文件夹，例如：
+1. Windows系统下，下载本项目编译好的EXE文件。
+2. 确保待整理的后缀为nes的ROM文件放在D:\nes\下，例如：
 
 ```
 
@@ -29,21 +29,14 @@ D:\nes
 
 ````
 
-3. 修改源码中的目标路径：
-```c
-char searchPath[MAX_PATH] = "D:\\nes\\*.nes";
-````
-
-
-
-4. 运行程序，它会自动：
+3.  运行程序，它会自动：
 
    * 读取 Mapper 编号
    * 创建对应目录 `D:\nes\Mapper-XX`
    * 移动文件到对应目录
    * 在当前目录生成 `mapperlog.txt`
 
-5. 整理结果示例：
+4. 整理结果示例：
 
    ```
    D:\nes\
@@ -58,12 +51,13 @@ char searchPath[MAX_PATH] = "D:\\nes\\*.nes";
 
 ## 输出日志
 
-程序会在根目录生成一个 `mapperlog.txt`，内容格式如下：
+程序会在EXE所在的目录生成一个 `mapperlog.txt`，内容格式如下：
 
 ```
 10-Yard Fight (USA, Europe).nes    Mapper: 0
 The Legend of Zelda (USA).nes      Mapper: 1
 ...
 
+### 可以自己修改源代码的路径重新编译EXE。
 
 
