@@ -19,7 +19,7 @@
 
 - 自动扫描指定目录下（D:\nes\）的所有 `.nes` 文件
 - 解析 iNES 文件头，获取 Mapper 编号
-- 根据该Mapper编号是否为PS2版SNESticle支持的编号（0、1/2/3/4/5/7/9/11/15/66），分别创建supported和unsupported文件夹，PS2的SNESticle只能运行supported文件夹中的FC ROM。
+- 根据该Mapper编号是否为PS2版SNESticle支持的编号（0/1/2/3/4/5/7/9/11/15/66），分别创建supported和unsupported文件夹，PS2的SNESticle只能运行supported文件夹中的FC ROM。
 - 自动将 NES ROM 文件移动到对应目录
 - 生成一个 `mapperlog.txt`，记录所有文件及其 Mapper 值
 
